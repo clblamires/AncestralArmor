@@ -32,6 +32,9 @@ i.tier_number {
     top: 0;
     padding-right: .5em;
 }
+.no-border  li {
+    border: none !important;
+}
 
 li {
     margin-bottom: .5em;

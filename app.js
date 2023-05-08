@@ -30,6 +30,7 @@ function renderItems(){
         checkbox.type = "checkbox";
         checkbox.checked = item.checked;
         let label = document.createElement("div");
+        label.setAttribute("data-tier", item.tier );
         // label.className = "checkbox";
         let span_name = document.createElement("span");
         let tier = item.tier;
@@ -95,7 +96,7 @@ function renderItems(){
 
         // add everything together
         label.appendChild(checkbox);
-        label.appendChild(tierIcon);
+        // label.appendChild(tierIcon);
         label.appendChild(span_name);
         label.appendChild(icon);
         label.appendChild(span_cost);
@@ -105,8 +106,58 @@ function renderItems(){
         itemList.appendChild(li);
 
     });// end adding items to the list
+    let ul = document.querySelectorAll('#list li');
+    ul.forEach( li => {
+        if( li.firstChild.getAttribute('data-tier') != 1 ){
+            li.classList.add("hidden");
+        } else {
+            li.classList.remove("hidden");
+        }
+    });
 
 }
+
+
+document.getElementById("tier1").addEventListener("click", () => {
+    let ul = document.querySelectorAll('#list li');
+    ul.forEach( li => {
+        if( li.firstChild.getAttribute('data-tier') != 1 ){
+            li.classList.add("hidden");
+        } else {
+            li.classList.remove("hidden");
+        }
+    });
+});
+document.getElementById("tier2").addEventListener("click", () => {
+    let ul = document.querySelectorAll('#list li');
+    ul.forEach( li => {
+        if( li.firstChild.getAttribute('data-tier') != 2 ){
+            li.classList.add("hidden");
+        } else {
+            li.classList.remove("hidden");
+        }
+    });
+});
+document.getElementById("tier3").addEventListener("click", () => {
+    let ul = document.querySelectorAll('#list li');
+    ul.forEach( li => {
+        if( li.firstChild.getAttribute('data-tier') != 3 ){
+            li.classList.add("hidden");
+        } else {
+            li.classList.remove("hidden");
+        }
+    });
+});
+document.getElementById("tier3").addEventListener("click", () => {
+    let ul = document.querySelectorAll('#list li');
+    ul.forEach( li => {
+        if( li.firstChild.getAttribute('data-tier') != 3 ){
+            li.classList.add("hidden");
+        } else {
+            li.classList.remove("hidden");
+        }
+    });
+});
 
 function loadItems(){
     let savedItems = localStorage.getItem("items");
