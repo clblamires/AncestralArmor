@@ -1,0 +1,74 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+h1.title {
+    text-align: center;
+    font-weight: 900;
+}
+
+.input[type='number']{
+    float: right;
+    width: 20%;
+    text-align: center;
+}
+.input[type='text']{
+    float: left;
+    width: 75%;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-right: 1em;
+    position: relative;
+    top: 2px;
+}
+
+i {
+    position: relative;
+    top: 4px;
+}
+i.tier_number {
+    position: relative;
+    top: 0;
+    padding-right: .5em;
+}
+
+li {
+    margin-bottom: .5em;
+    padding: .75em 0;
+    border-bottom: solid 1px #363636;
+}
+
+.bold-text {
+    font-weight: 900;
+}
+
+.description {
+    font-size: 80%;
+}
+
+
+.right_float {
+    float: right;
+    padding-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.red {
+    color: #ac0e0e;
+}
+
+#character_name {
+    text-align: center;
+}
+
+#remaining_points {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
