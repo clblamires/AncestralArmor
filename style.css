@@ -27,7 +27,7 @@ i {
     position: relative;
     top: 4px;
 }
-i.tier_number {
+i.fixed {
     position: relative;
     top: 0;
     padding-right: .5em;

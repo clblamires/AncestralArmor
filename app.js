@@ -201,3 +201,11 @@ function saveItems(){
 
 // run program!
 loadItems();
+
+document.getElementById("reset").addEventListener("click", () => {
+    if( confirm("Are you sure?")){
+        localStorage.clear();
+        window.scrollTo(0,0);
+        location.reload();
+    }
+})
