@@ -2,6 +2,7 @@
 
 h1.title {
     text-align: center;
+    color: #485fc7;
     font-weight: 900;
 }
 
@@ -24,8 +25,8 @@ input[type='checkbox'] {
 }
 
 i {
-    position: relative;
-    top: 4px;
+    /* position: relative;
+    top: 4px; */
 }
 i.fixed {
     position: relative;
@@ -60,8 +61,10 @@ li {
     display: none;
 }
 
-.red {
-    color: #ac0e0e;
+.blue_icon {
+    color: #485fc7;
+    position: relative;
+    top: 4px;
 }
 
 #character_name {

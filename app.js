@@ -34,10 +34,7 @@ function renderItems(){
         let label = document.createElement("label");
         // label.className = "checkbox";
         let span_name = document.createElement("span");
-        let tier = item.tier;
-        tier = "fa-" + tier;
-        let tierIcon = document.createElement("i");
-        tierIcon.classList.add("fa-solid", tier, "tier_number");
+
 
         span_name.textContent = item.name;
         span_name.className = "bold-text";
@@ -49,7 +46,7 @@ function renderItems(){
         p.classList.add("hidden");
         p.textContent = item.description;
         let icon = document.createElement("i");
-        icon.classList.add("fa-solid", "fa-circle-arrow-down", "right_float", "red");
+        icon.classList.add("fa-solid", "fa-circle-arrow-down", "right_float", "blue_icon");
         let br = document.createElement("br");
         let using_br = false;
 
@@ -121,6 +118,10 @@ function renderItems(){
 
 
 document.getElementById("tier1").addEventListener("click", () => {
+    document.getElementById("tier1").parentNode.classList.add("is-active");
+    document.getElementById("tier2").parentNode.classList.remove("is-active");
+    document.getElementById("tier3").parentNode.classList.remove("is-active");
+    document.getElementById("tier4").parentNode.classList.remove("is-active");
     let ul = document.querySelectorAll('#list li');
     ul.forEach( li => {
         if( li.firstChild.getAttribute('data-tier') != 1 ){
@@ -131,32 +132,47 @@ document.getElementById("tier1").addEventListener("click", () => {
     });
 });
 document.getElementById("tier2").addEventListener("click", () => {
+    document.getElementById("tier2").parentNode.classList.add("is-active");
+    document.getElementById("tier1").parentNode.classList.remove("is-active");
+    document.getElementById("tier3").parentNode.classList.remove("is-active");
+    document.getElementById("tier4").parentNode.classList.remove("is-active");
     let ul = document.querySelectorAll('#list li');
     ul.forEach( li => {
         if( li.firstChild.getAttribute('data-tier') != 2 ){
             li.classList.add("hidden");
         } else {
             li.classList.remove("hidden");
+            li.classList.add("is-active");
         }
     });
 });
 document.getElementById("tier3").addEventListener("click", () => {
+    document.getElementById("tier3").parentNode.classList.add("is-active");
+    document.getElementById("tier2").parentNode.classList.remove("is-active");
+    document.getElementById("tier1").parentNode.classList.remove("is-active");
+    document.getElementById("tier4").parentNode.classList.remove("is-active");
     let ul = document.querySelectorAll('#list li');
     ul.forEach( li => {
         if( li.firstChild.getAttribute('data-tier') != 3 ){
             li.classList.add("hidden");
         } else {
             li.classList.remove("hidden");
+            li.classList.add("is-active");
         }
     });
 });
 document.getElementById("tier4").addEventListener("click", () => {
+    document.getElementById("tier4").parentNode.classList.add("is-active");
+    document.getElementById("tier2").parentNode.classList.remove("is-active");
+    document.getElementById("tier3").parentNode.classList.remove("is-active");
+    document.getElementById("tier1").parentNode.classList.remove("is-active");
     let ul = document.querySelectorAll('#list li');
     ul.forEach( li => {
         if( li.firstChild.getAttribute('data-tier') != 4 ){
             li.classList.add("hidden");
         } else {
             li.classList.remove("hidden");
+            li.classList.add("is-active");
         }
     });
 });
