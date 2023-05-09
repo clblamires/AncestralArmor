@@ -178,7 +178,7 @@ document.getElementById("tier4").addEventListener("click", () => {
 });
 
 function loadItems(){
-    let savedItems = localStorage.getItem("items");
+    let savedItems = localStorage.getItem("armor_items");
     if( savedItems ){
         items = JSON.parse(savedItems); // overwrite the built-in
 
@@ -214,7 +214,7 @@ function loadItems(){
 }
 
 function saveItems(){
-    localStorage.setItem("items", JSON.stringify(items));
+    localStorage.setItem("armor_items", JSON.stringify(items));
 }
 
 // run program!
@@ -222,7 +222,7 @@ loadItems();
 
 document.getElementById("reset").addEventListener("click", () => {
     if( confirm("Are you sure?")){
-        localStorage.clear();
+        localStorage.removeItem("armor_items");
         window.scrollTo(0,0);
         location.reload();
     }

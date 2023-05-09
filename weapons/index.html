@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancestral Weapons</title>
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="page" class="block">
+        <div class="column">
+            <h1 class="title">
+                Ancestral Weapons <i class="fa-sharp fa-solid fa-swords"></i>
+            </h1>
+        </div>
+        <div class="column">
+            <input type="text" class="input" id="character_name" placeholder="Enter your character's name">
+            <input type="number" class="input" id="points" placeholder="Points">
+        </div>
+        <div class="column">
+            <hr>
+            <p id="remaining_points">
+                Points Used: 
+                <span id="remaining"></span> / <span id="max"></span>
+            </p>
+            <!-- <p class="smaller">Switch to Weapons</p> -->
+        </div>
+
+        <div class="column no-border">
+            <div class="tabs is-toggle is-centered">
+                <ul>
+                    <li class="is-active"><a id="tier1">Tier 1</a></li>
+                    <li><a id="tier2">Tier 2</a></li>
+                    <li><a id="tier3">Tier 3</a></li>
+                    <li><a id="tier4">Tier 4</a></li>
+                </ul>
+            </div>
+        </div>
+       
+        <div class="column">
+            <ul id="list"></ul>
+
+        </div>
+    </div>
+    <div class="column">
+        <p style="text-align:center;">
+            <a href="../" class="button is-link">
+                <i class="fa-solid fa-arrow-left-long fixed"></i>
+                Back
+            </a> 
+            <button class="button is-danger" id="reset">
+                <i class="fa-solid fa-trash-can fixed"></i>
+                Clear
+            </button>
+
+        </p>
+    </div>
+
+    <script src="../_js/weapons.js"></script>
+    <script src="../_js/app_weapons.js"></script>
+</body>
+</html>

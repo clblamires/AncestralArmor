@@ -5,6 +5,9 @@ h1.title {
     color: #485fc7;
     font-weight: 900;
 }
+h2.subtitle {
+    text-align: center;
+}
 
 .input[type='number']{
     float: right;
@@ -67,11 +70,7 @@ li {
     top: 4px;
 }
 
-#character_name {
-    text-align: center;
-}
-
-#remaining_points {
+#character_name, #remaining_points, .is-centered {
     text-align: center;
 }
 
