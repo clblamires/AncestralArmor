@@ -29,8 +29,9 @@ function renderItems(){
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = item.checked;
-        let label = document.createElement("div");
-        label.setAttribute("data-tier", item.tier );
+        let div = document.createElement("div");
+        div.setAttribute("data-tier", item.tier );
+        let label = document.createElement("label");
         // label.className = "checkbox";
         let span_name = document.createElement("span");
         let tier = item.tier;
@@ -98,10 +99,11 @@ function renderItems(){
         label.appendChild(checkbox);
         // label.appendChild(tierIcon);
         label.appendChild(span_name);
-        label.appendChild(icon);
-        label.appendChild(span_cost);
-        label.appendChild(p);
-        li.appendChild(label);
+        div.appendChild(label);
+        div.appendChild(icon);
+        div.appendChild(span_cost);
+        div.appendChild(p);
+        li.appendChild(div);
         // li.appendChild(checkbox);
         itemList.appendChild(li);
 
@@ -148,10 +150,10 @@ document.getElementById("tier3").addEventListener("click", () => {
         }
     });
 });
-document.getElementById("tier3").addEventListener("click", () => {
+document.getElementById("tier4").addEventListener("click", () => {
     let ul = document.querySelectorAll('#list li');
     ul.forEach( li => {
-        if( li.firstChild.getAttribute('data-tier') != 3 ){
+        if( li.firstChild.getAttribute('data-tier') != 4 ){
             li.classList.add("hidden");
         } else {
             li.classList.remove("hidden");
