@@ -4,16 +4,25 @@ let character_name = document.getElementById("character_name");
 character_name.addEventListener("change", () =>{
     localStorage.setItem("character_name", character_name.value);
 });
+let character_level = document.getElementById("level");
+character_level.addEventListener("change", () => {
+    localStorage.setItem("character_level", character_level.value );
+});
 
 let current_points = 0;
 let max_points = 0;
-let points = document.getElementById("points");
-// let points_remaining = document.getElementById("points_remaining");
-points.addEventListener("change", ()=>{
-    localStorage.setItem("points", points.value);
-    document.getElementById("max").innerHTML = points.value || 0;
-    max_points = Number(document.getElementById("max").innerHTML);
-});
+// let points = document.getElementById("points");
+// // let points_remaining = document.getElementById("points_remaining");
+// points.addEventListener("change", ()=>{
+//     localStorage.setItem("points", points.value);
+//     document.getElementById("max").innerHTML = points.value || 0;
+//     max_points = Number(document.getElementById("max").innerHTML);
+// });
+// let level = document.getElementById("level");
+// level.addEventListener("click", (e)=>{
+//     e.stopPropagation();
+//     level.classList.toggle("is-active");
+// });
 
 
 function renderItems(){
@@ -200,6 +209,11 @@ function loadItems(){
     let savedName = localStorage.getItem("character_name");
     if( savedName ){
         character_name.value = savedName;
+    }
+
+    let savedLevel = localStorage.getItem("character_level");
+    if( savedLevel ){
+        character_level.value = savedLevel;
     }
 
 
